@@ -9,6 +9,17 @@ Tips:
 - You can also use the --rampup period to find your breaking point (again ramping up slowly)
 - Once you've found the limit of your target system, run your final load test (e.g. testing peak load for an hour)
 
+```
+usage: scenarios/basic/load.rb [options]
+    -u, --url         target url
+    -t, --throughput  requests per second
+    -d, --duration    duration in seconds
+    -r, --rampup      rampup in seconds
+    -h, --threads     threads, if you want to be specific
+    -g, --gui         use gui (local only) be sure to export JMETER_BIN
+    --help            
+```
+
 ## Run with docker
 ```
 docker build -t jmeter:latest .
