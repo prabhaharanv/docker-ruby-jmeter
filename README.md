@@ -1,6 +1,8 @@
 # ruby-jmeter-docker
 A good reference for running load tests with ruby jmeter and docker. You can clone this repo, create your own scenario folder and load test script then package up your load test to run anywhere. Running on a multi-cpu instance, you should be able to generate lots of load, ymmv.
 
+Conceptual clarification: jmeter is a multi-threaded load generation program. Each "v-user" is a thread. The "scenario" defines what the script is to do (how many threads, what requests to make, etc). ruby-jmeter is just a helper script that generates a valid jmeter scenario (an xml file) then shells-out to run jmeter itself.
+
 ## basic scenario
 An example script has been provided in scenarios/basic/load.rb. It has a basic restful POST example with jmeter ramping up and sustaining a fixed throughput. This is a solid pattern for load testing. The script also includes the needed CLI flag handling. Just copy it, and create your own scenarios with https://github.com/flood-io/ruby-jmeter.
 
