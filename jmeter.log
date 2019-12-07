@@ -1,0 +1,64 @@
+2019-12-06 22:37:19,452 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2019-12-06 22:37:19,487 INFO o.a.j.JMeter: Loading user properties from: user.properties
+2019-12-06 22:37:19,488 INFO o.a.j.JMeter: Loading system properties from: /Users/bneutra/mps/load-testing/apache-jmeter-5.1/bin/system.properties
+2019-12-06 22:37:19,494 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2019-12-06 22:37:19,494 INFO o.a.j.JMeter: Version 5.1 r1853635
+2019-12-06 22:37:19,494 INFO o.a.j.JMeter: java.version=11.0.1
+2019-12-06 22:37:19,494 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2019-12-06 22:37:19,494 INFO o.a.j.JMeter: os.name=Mac OS X
+2019-12-06 22:37:19,494 INFO o.a.j.JMeter: os.arch=x86_64
+2019-12-06 22:37:19,494 INFO o.a.j.JMeter: os.version=10.14.6
+2019-12-06 22:37:19,495 INFO o.a.j.JMeter: file.encoding=UTF-8
+2019-12-06 22:37:19,495 INFO o.a.j.JMeter: java.awt.headless=true
+2019-12-06 22:37:19,495 INFO o.a.j.JMeter: Max memory     =1073741824
+2019-12-06 22:37:19,495 INFO o.a.j.JMeter: Available Processors =8
+2019-12-06 22:37:19,503 INFO o.a.j.JMeter: Default Locale=English (EN)
+2019-12-06 22:37:19,504 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2019-12-06 22:37:19,504 INFO o.a.j.JMeter: JMeterHome=/Users/bneutra/mps/load-testing/apache-jmeter-5.1
+2019-12-06 22:37:19,504 INFO o.a.j.JMeter: user.dir  =/Users/bneutra/nava/docker-jmeter
+2019-12-06 22:37:19,504 INFO o.a.j.JMeter: PWD       =/Users/bneutra/nava/docker-jmeter
+2019-12-06 22:37:19,509 INFO o.a.j.JMeter: IP: 192.168.86.29 Name: brendanmacbook2.lan FullName: brendanmacbook2.lan
+2019-12-06 22:37:19,514 INFO o.a.j.s.FileServer: Default base='/Users/bneutra/nava/docker-jmeter'
+2019-12-06 22:37:19,515 INFO o.a.j.s.FileServer: Set new base='/Users/bneutra/nava/docker-jmeter'
+2019-12-06 22:37:19,682 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2019-12-06 22:37:19,702 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2019-12-06 22:37:19,705 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2019-12-06 22:37:19,708 INFO o.a.j.s.SaveService: Loading file: ruby-jmeter.jmx
+2019-12-06 22:37:19,755 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-12-06 22:37:19,756 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-12-06 22:37:19,756 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-12-06 22:37:19,756 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-12-06 22:37:19,756 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2019-12-06 22:37:19,756 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2019-12-06 22:37:19,767 INFO o.a.j.JMeter: Creating summariser <summary>
+2019-12-06 22:37:19,777 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2019-12-06 22:37:19,781 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2019-12-06 22:37:19,781 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2019-12-06 22:37:19,787 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2019-12-06 22:37:19,788 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2019-12-06 22:37:20,086 INFO o.a.j.JMeter: Running test (1575700640086)
+2019-12-06 22:37:20,100 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : ThreadGroup
+2019-12-06 22:37:20,100 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group ThreadGroup.
+2019-12-06 22:37:20,100 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2019-12-06 22:37:20,101 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 perThread=1000.0 delayedStart=true
+2019-12-06 22:37:20,101 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2019-12-06 22:37:20,101 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2019-12-06 22:37:20,108 INFO o.a.j.t.JMeterThread: Thread started: ThreadGroup 1-1
+2019-12-06 22:37:20,129 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = brendanmacbook2.lan
+2019-12-06 22:37:20,138 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2019-12-06 22:37:20,139 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2019-12-06 22:37:20,139 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2019-12-06 22:37:20,139 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2019-12-06 22:37:20,139 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2019-12-06 22:37:20,279 INFO o.a.j.p.h.s.h.LazyLayeredConnectionSocketFactory: Setting up HTTPS TrustAll Socket Factory
+2019-12-06 22:37:20,285 INFO o.a.j.u.JsseSSLManager: Using default SSL protocol: TLS
+2019-12-06 22:37:20,285 INFO o.a.j.u.JsseSSLManager: SSL session context: per-thread
+2019-12-06 22:37:20,424 INFO o.a.j.u.SSLManager: JmeterKeyStore Location:  type JKS
+2019-12-06 22:37:20,426 INFO o.a.j.u.SSLManager: KeyStore created OK
+2019-12-06 22:37:20,427 WARN o.a.j.u.SSLManager: Keystore file not found, loading empty keystore
+2019-12-06 22:37:30,396 INFO o.a.j.r.Summariser: summary +     11 in 00:00:10 =    1.1/s Avg:   300 Min:   273 Max:   521 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2019-12-06 22:37:50,380 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: ThreadGroup 1-1
+2019-12-06 22:37:50,380 INFO o.a.j.t.JMeterThread: Thread finished: ThreadGroup 1-1
+2019-12-06 22:37:50,381 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2019-12-06 22:37:50,383 INFO o.a.j.r.Summariser: summary +     20 in 00:00:20 =    1.0/s Avg:   273 Min:   263 Max:   285 Err:     0 (0.00%) Active: 0 Started: 1 Finished: 1
+2019-12-06 22:37:50,384 INFO o.a.j.r.Summariser: summary =     31 in 00:00:30 =    1.0/s Avg:   283 Min:   263 Max:   521 Err:     0 (0.00%)
