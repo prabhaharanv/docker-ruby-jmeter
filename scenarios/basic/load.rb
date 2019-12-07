@@ -1,30 +1,32 @@
+# and example load test that take CLI args and does POST requests
 require 'ruby-jmeter'
 require 'slop'
 
 opts = Slop.parse do |o|
-  o.string '-u', '--url', 'target url'
-  o.float '-t', '--throughput', 'requests per minute'
-  o.integer '-d', '--duration', 'duration in seconds'
-  o.integer '-r', '--rampup', 'rampup in seconds'
-  o.bool '-g', '--gui', 'use gui'
+  o.string '-u', '--url', 'target url', required: true
+  o.float '-t', '--throughput', 'requests per second', required: true
+  o.integer '-d', '--duration', 'duration in seconds', required: true
+  o.integer '-r', '--rampup', 'rampup in seconds', required: true
+  o.integer '-h', '--threads', 'threads, if you want to be specific'
+  o.bool '-g', '--gui', 'use gui (local only) be sure to export JMETER_BIN'
 end
 # default to Dockerfile jmeter location
 jmeter_path = ENV['JMETER_BIN'] ? ENV['JMETER_BIN'] : '/opt/jmeter/bin/'
 json_path = File.dirname(__FILE__) + '/payload.json'
 gui = opts.gui? # only true for non docker testing
 url = opts[:url]
-throughput = opts[:throughput]
+rpm = opts[:throughput] * 60
 duration = opts[:duration]
 rampup = opts[:rampup]
-threads = (throughput / 120).to_i + 1 # enough threads, as long as latency is < 500ms
+# a good default thread count is half the desired requests/s
+threads = opts[:threads] ? opts[:threads] : (rpm / 120).to_i + 1
 
-puts opts.to_hash
-puts threads
-$stdout.sync = true
+$stdout.sync = true # make sure jmeter stdout is flowing
 
+# LOAD TEST
 testplan = test do
   threads count: threads, duration: duration, rampup: rampup do
-    constant_throughput_timer throughput: throughput / threads
+    constant_throughput_timer throughput: rpm / threads
     if gui
       view_results_tree
       aggregate_report

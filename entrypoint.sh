@@ -13,3 +13,7 @@ rm -rf /mnt/jmeter.jtl /mnt/output/*
 cd /app
 ruby $@
 mv jmeter.* /mnt/output/
+mv ruby-jmeter.jmx /mnt/output/
+# create report
+cd /mnt/output
+/opt/jmeter/bin/jmeter -g jmeter.jtl -o html

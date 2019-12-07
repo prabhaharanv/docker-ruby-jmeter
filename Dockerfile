@@ -35,6 +35,6 @@ CMD ls -l /opt/jmeter/bin
 WORKDIR /mnt
 
 # docker build -t jmeter:latest .
-# docker run -it -v `pwd`:/mnt jmeter:latest scenarios/basic/load.rb -t 120 -d 20 -r 1 -u https://www.mockbin.org/request
+# docker run -it -v `pwd`:/mnt jmeter:latest scenarios/basic/load.rb --throughput 2 --duration 20 --rampup 1 --url https://www.mockbin.org/request
 
 ENTRYPOINT ["/app/entrypoint.sh"]
