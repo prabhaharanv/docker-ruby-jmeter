@@ -6,6 +6,7 @@ An example script has been provided in scenarios/basic/load.rb. It has a basic r
 
 Tips:
 - load balancers (e.g. AWS ALB/ELB) require warmup (ALB's with default 3 nodes can be stressed with merely 100's of rps). lb's only scale out "nodes" only after receiving increased load. Use --rampup to ensure you double load only every 5m or so.
+- also: https://www.blazemeter.com/blog/dns-cache-manager-right-way-test-load-balanced-apps/
 - You can also use the --rampup period to find your breaking point (again ramping up slowly)
 - Once you've found the limit of your target system, run your final load test (e.g. testing peak load for an hour)
 
