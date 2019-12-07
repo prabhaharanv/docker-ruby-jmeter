@@ -47,6 +47,7 @@ export JMETER_BIN=PATH_TO_JMETER_BIN
 ```
 ruby scenarios/basic/load.rb -t 2 -d 20 -r 1 -u https://www.mockbin.org/request
 ``` 
+When running locally, you might find jmeter's gui mode quite useful (the basic scenario has a --gui flag to enable that)
 
 ### Create an html report
 
