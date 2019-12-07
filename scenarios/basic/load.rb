@@ -18,8 +18,8 @@ url = opts[:url]
 rpm = opts[:throughput] * 60
 duration = opts[:duration]
 rampup = opts[:rampup]
-# a good default thread count is half the desired requests/s
-threads = opts[:threads] ? opts[:threads] : (rpm / 120).to_i + 1
+# a good default thread count is 1/5 the desired requests/s
+threads = opts[:threads] ? opts[:threads] : (opts[:throughput] / 5).to_i + 1
 
 $stdout.sync = true # make sure jmeter stdout is flowing
 
