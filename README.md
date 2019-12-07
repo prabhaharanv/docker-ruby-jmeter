@@ -45,7 +45,7 @@ export JMETER_BIN=PATH_TO_JMETER_BIN
 
 ### Run
 ```
-ruby scenarios/basic/load.rb -t 120 -d 20 -r 1 -u https://www.mockbin.org/request
+ruby scenarios/basic/load.rb -t 2 -d 20 -r 1 -u https://www.mockbin.org/request
 ``` 
 
 ### Create an html report
