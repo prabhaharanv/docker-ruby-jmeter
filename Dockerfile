@@ -1,5 +1,5 @@
 # ruby-jmeter image to run irfload.rb
-FROM base:latest
+FROM bneutra/ruby-jmeter:latest
 RUN mkdir /app
 COPY scenarios /app/scenarios
 COPY entrypoint.sh /app/
