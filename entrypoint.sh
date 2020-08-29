@@ -10,10 +10,15 @@ export JVM_ARGS="-Xmn${n}m -Xms${s}m -Xmx${x}m"
 mkdir -p /mnt/output
 rm -rf /mnt/jmeter.jtl /mnt/output/*
 # run your ruby-jmeter script with args
-cd /app
-ruby $@
-mv jmeter.* /mnt/output/
-mv ruby-jmeter.jmx /mnt/output/
-# create report
 cd /mnt/output
+echo START: `date` > /mnt/output/results.txt
+ruby /app/$@
+# generate reports (including statistic.json)
 /opt/jmeter/bin/jmeter -g jmeter.jtl -o html
+# output a simple txt/markdown report
+echo "+++RESULTS+++"
+ruby /app/reporter.rb /mnt/output/html/statistics.json 
+# write report to file
+echo END:   `date` >> /mnt/output/results.txt
+ruby /app/reporter.rb /mnt/output/html/statistics.json >> /mnt/output/results.txt
+cp /mnt/output/html/statistics.json /mnt/output/

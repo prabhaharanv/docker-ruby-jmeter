@@ -25,6 +25,7 @@ usage: scenarios/basic/load.rb [options]
 
 ## Run with docker
 ```
+docker build -t base:latest base/
 docker build -t jmeter:latest .
 
 docker run -it -v `pwd`:/mnt jmeter:latest \
